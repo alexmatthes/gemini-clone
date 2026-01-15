@@ -63,7 +63,17 @@ const Main = () => {
 
                 <div className="main-bottom">
                     <div className="search-box">
-                        <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter a prompt here" />
+                        <input
+                            onChange={(e) => setInput(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" && input) {
+                                    onSent();
+                                }
+                            }}
+                            value={input}
+                            type="text"
+                            placeholder="Enter a prompt here"
+                        />
                         <div>
                             <img src={assets.gallery_icon} alt="gallery icon" />
                             <img src={assets.mic_icon} alt="mic icon" />

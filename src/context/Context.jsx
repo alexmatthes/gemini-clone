@@ -75,6 +75,11 @@ const ContextProvider = (props) => {
         }
     }
 
+    const newChat = () => {
+        setLoading(false);
+        setShowResult(false);
+    }
+
     const contextValue = {
         prevPrompts,
         setPrevPrompts,
@@ -85,7 +90,8 @@ const ContextProvider = (props) => {
         loading,
         resultData,
         input,
-        setInput
+        setInput,
+        newChat
     }
 
     return (
