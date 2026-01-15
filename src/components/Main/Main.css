@@ -112,9 +112,41 @@
     gap: 15px;
 }
 
+.search-box:has(input:focus) {
+    background-color: #e6eaf1; /* Slightly darker when active */
+    outline: 1px solid #c4c7c5;
+}
+
 .main .bottom-info{
     font-size: 13px;
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
+}
+
+.result {
+    padding: 0px 5%;
+    max-height: 70vh; /* Keeps the scrollable area above the input box */
+    overflow-y: scroll; /* Enables scrolling for chat text */
+}
+
+/* Hide scrollbar for the result container specifically if you prefer */
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .main-bottom input{
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img{
+        width: 20px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
 }
