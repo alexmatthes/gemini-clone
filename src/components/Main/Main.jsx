@@ -11,7 +11,7 @@ const Main = () => {
     return (
         <div className="main">
             <div className="nav">
-                <p>Gemini</p>
+                <p>Alex AI</p>
                 <img src={assets.user_icon} alt="user icon" />
             </div>
             <div className="main-container">
@@ -20,25 +20,27 @@ const Main = () => {
                     ? <>
                         <div className="greet">
                             <p><span>Hello!</span></p>
-                            <p>How can I help you today?</p>
+                            <p>I'm Alex AI. Ask me anything about Alex.</p>
                         </div>
                         <div className="cards">
-                            {/* You can make these clickable too by adding onClick={() => onSent("Prompt text...")} */}
-                            <div className="card" onClick={() => onSent("Suggest beautiful places to see on an upcoming roadtrip.")}>
-                                <p>Suggest beautiful places to see on an upcoming roadtrip.</p>
-                                <img src={assets.compass_icon} alt="compass icon" />
+                            <div className="card" onClick={() => onSent("Tell me about Alex's full-stack development projects like Fortify.")}>
+                                <p>Tell me about Alex's full-stack development projects.</p>
+                                <img src={assets.code_icon} alt="code icon" />
                             </div>
-                            <div className="card" onClick={() => onSent("Suggest ideas for my child's birthday party.")}>
-                                <p>Suggest ideas for my child's birthday party.</p>
+
+                            <div className="card" onClick={() => onSent("What is Alex's experience with low-level systems programming in C?")}>
+                                <p>What is Alex's experience with systems programming?</p>
                                 <img src={assets.bulb_icon} alt="bulb icon" />
                             </div>
-                            <div className="card" onClick={() => onSent("Summarize this team meeting transcript.")}>
-                                <p>Summarize this team meeting transcript.</p>
-                                <img src={assets.message_icon} alt="message icon" />
+
+                            <div className="card" onClick={() => onSent("Summarize Alex's professional experience.")}>
+                                <p>Summarize Alex's professional experience.</p>
+                                <img src={assets.compass_icon} alt="compass icon" />
                             </div>
-                            <div className="card" onClick={() => onSent("Improve the accessibility of this code.")}>
-                                <p>Improve the accessibility of this code.</p>
-                                <img src={assets.code_icon} alt="code icon" />
+
+                            <div className="card" onClick={() => onSent("How can I contact Alex for an interview?")}>
+                                <p>How can I contact Alex for an interview?</p>
+                                <img src={assets.message_icon} alt="message icon" />
                             </div>
                         </div>
                     </>
